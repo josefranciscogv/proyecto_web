@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+
+    #registro input:invalid{
+        border-color: red;
+    }    
+
+</style>
+
+
+<head>
+  <title>CineFan</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="nav navbar-nav">
+      <a class="nav-item nav-link active" href="https://cinefan.herokuapp.com/home">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="https://cinefan.herokuapp.com/api/products">Productos</a>
+      <a class="nav-item nav-link" href="https://cinefan.herokuapp.com/api/Peliculas">Peliculas</a>
+      <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#registro">Registrarse</a>
+      <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId">Login</a>
+      <a class="nav-item nav-link" href="https://cinefan.herokuapp.com/api/users">Administración de usuarios</a>
+    </div>
+  </nav>
+  
+  <div class="container my-4">
+    <a href="https://cinefan.herokuapp.com/home"><img src="https://i.ibb.co/XXbVbkz/cine.png" alt="cine" border="0"></a>
+    <hr class="my-4">
+
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+      <!--Controls-->
+      <div class="controls-top">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+      <!--/.Controls-->
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+        <li data-target="#multi-item-example" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://promociondescuentos.com/wp-content/uploads/2015/12/cinepolis-cupon-2x1-boletos.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Promocion 2x1</h4>
+                  <p class="card-text">¡No te pierdas esta oferta!</p>
+                  <a class="btn btn-primary">Ver mas</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/t/a/taza-de-ceramica-moldeada-marvel-spider-man.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Vaso spiderman</h4>
+                  <p class="card-text">$80 pesos</p>
+                  <a href="https://cinefan.herokuapp.com/api/products" class="btn btn-primary">Ver mas Productos</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2">
+                <img class="card-img-top" src="https://hipertextual.com/files/2014/06/15-cine-scaled.jpg"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Compra de voletos</h4>
+                  <p class="card-text">Ve nuestras peliculas disponibles</p>
+                  <a href="https://cinefan.herokuapp.com/api/Peliculas" class="btn btn-primary">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/.First slide-->
+      </div>
+      <!--/.Slides-->
+
+    </div>
+    <!--/.Carousel Wrapper-->
+
+  </div>
+
+  <!-- Modal Login-->
+  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="form-group">
+              <label for="">Correo</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user    "></i></span>
+                </div>
+                <input type="text" class="col-10 form-control" name="" id="CorreoLogin" aria-describedby="helpId"
+                  placeholder="correo registrado">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-key    "></i></span>
+                </div>
+                <input type="password" class="col-10 form-control" name="" id="PasswordLogin" aria-describedby="helpId"
+                  placeholder="contraseña registrado">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="controls">
+                <button type="button" class="btn btn-success" data-dismiss="modal" id = "LoginBtn">Login</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 control">
+                <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                  No tienes cuenta!
+                  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registro">
+                    Registrate aquí
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- Modal Registro-->
+  <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Registrar usuario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+          <div class="row">
+              <div class="col-6">
+                <input type="text" name="" id="nombre" class="form-control" placeholder="Nombre o nombres" aria-describedby="helpId" required>
+              </div>
+              <div class="col-6">
+                 <input type="text" name="" id="apellido" class="form-control" placeholder="Apellidos" aria-describedby="helpId" required>
+              </div>
+          
+          </div>
+
+
+
+               <input type="email" name="" id="email" class="form-control mt-3" placeholder="Tu correo" aria-describedby="helpId" required>
+ 
+              <input type="password" name="" id="passwIni" class="form-control mt-3" placeholder="Contraseña" aria-describedby="helpId" required >
+          
+              <input type="password" name="" id="passConf" class="form-control mt-3" placeholder="Confirmar contraseña" aria-describedby="helpId" required >
+
+              <input type="date" class="form-control mt-3" value="1998-02-04" name="" id="fecha" >
+
+              <div class="radioB mt-3 border" id = "divUrlNext">
+
+                  <div class="form-check">
+                      <label class="form-check-label ml-3">
+                          <input type="radio" class="form-check-input sexoF" name="sexo" id="sexoFem" value="F"
+                              checked>
+                          Mujer
+                      </label>
+                  </div>
+
+                  <div class="form-check">
+                      <label class="form-check-label ml-3">
+                          <input type="radio" class="form-check-input sexoM" name="sexo" id="sexoMasc" value="M">
+                          Hombre
+                      </label>
+                  </div>
+              </div>
+
+              <input type="url" name="" id="url" class="form-control mt-3" placeholder="Url de imagen de perfil" aria-describedby="helpId">
+
+            <button type="submit" class="btn btn-success mt-3" id = "SubmitRegistro" data-dismiss="modal">Registrarse</button>
+             <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
+          
+            </form>
+
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="request.js"></script>
+  <script src="main_index.js"></script>
+
+</body>
+
+</html>

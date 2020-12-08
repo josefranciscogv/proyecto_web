@@ -1,0 +1,4 @@
+ git status   
+ git add .   
+git commit -m "ddd"
+git push heroku master
